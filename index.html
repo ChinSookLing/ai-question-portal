@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script>
+    	function submitQuestion() {
+        var question = document.getElementById("question").value;
+        if (question) {
+            document.getElementById("results").innerHTML = "<h2>Processing: " + question + "</h2><p>Fake answers from AIs: Grok says 	'Hi!', Gemini says 'Hello!'</p>";
+        } else {
+            alert("Please enter a question!");
+        }
+    	}
+	</script>
+    <title>My AI Question Portal</title>
+</head>
+<body>
+    <h1>Welcome to My AI Question Portal</h1>
+    <p>Enter your question below, and we'll get answers from Grok, Deepseek, Gemini, and Copilot!</p>
+    
+    <form>
+        <label for="question">Your Question:</label><br>
+        <textarea id="question" name="question" rows="4" cols="50"></textarea><br><br>
+	<button type="button" onclick="submitQuestion()">Submit</button>
+     </form>
+    
+    <div id="results">
+        <!-- Answers will go here later -->
+    </div>
+</body>
+</html>
